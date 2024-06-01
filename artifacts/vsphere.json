@@ -8,9 +8,9 @@
   "insecure_connection": "true",
   "linked_clone": "false",
   "network": "DC1-MGMT",
-  "password": "Edgecompute22!",
+  "password": "<PASSWORD>",
   "resource_pool": "",
   "template": "base-ubuntu-2204-efi",
   "username": "administrator@vsphere.local",
-  "vcenter_server": "dc1-vcenter.eqix.vmwedge.com"
+  "vcenter_server": "<VCENTER IP OR FQDN>"
 }
