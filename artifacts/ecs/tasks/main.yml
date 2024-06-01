@@ -1,0 +1,7 @@
+---
+# tasks file for ecs
+- name: Make sudo without password for {{ sudo_user }} user
+  copy:
+    dest: /etc/sudoers.d/80-ansible-sudo-user
+    content: "{{ sudo_user }} ALL=(ALL) NOPASSWD:ALL"
+    mode: 0440

@@ -1,0 +1,16 @@
+{
+  "cluster": "DC1-Cluster",
+  "convert_to_template": "false",
+  "create_snapshot": "true",
+  "datacenter": "DC1",
+  "datastore": "dc-vsanDatastore",
+  "folder": "",
+  "insecure_connection": "true",
+  "linked_clone": "false",
+  "network": "DC1-MGMT",
+  "password": "Edgecompute22!",
+  "resource_pool": "",
+  "template": "base-ubuntu-2204-efi",
+  "username": "administrator@vsphere.local",
+  "vcenter_server": "dc1-vcenter.eqix.vmwedge.com"
+}
