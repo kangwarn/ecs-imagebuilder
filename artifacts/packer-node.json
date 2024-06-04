@@ -476,7 +476,7 @@
     "crictl_version": null,
     "datastore": "",
     "destroy": "false",
-    "disk_size": "20480",
+    "disk_size": "30720",
     "existing_ansible_ssh_args": "{{env `ANSIBLE_SSH_ARGS`}}",
     "export_manifest": "none",
     "folder": "",
