@@ -1,0 +1,49 @@
+- name: Add Intel GPU repo key
+  ansible.builtin.apt_key:
+    url: "{{ intel_deb_gpg_key }}"
+    keyring: "{{ intel_gpg_key_file }}"
+    state: present
+
+- name: Add the Intel GPU repo
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64,i386 signed-by={{ intel_gpg_key_file }}] {{ intel_deb_repo }} {{ ansible_distribution_release }} client"
+    update_cache: true
+    state: present
+    mode: "0644"
+    filename: intel-gpu-{{ ansible_distribution_release }}.list
+
+- name: Install Intel GPU files
+  ansible.builtin.apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - intel-opencl-icd
+      - intel-level-zero-gpu
+      - level-zero
+      - intel-media-va-driver-non-free
+      - libmfx1
+      - libmfxgen1
+      - libvpl2
+      - libegl-mesa0
+      - libegl1-mesa
+      - libegl1-mesa-dev
+      - libgbm1
+      - libgl1-mesa-dev
+      - libgl1-mesa-dri
+      - libglapi-mesa
+      - libgles2-mesa-dev
+      - libglx-mesa0
+      - libigdgmm12
+      - libxatracker2
+      - mesa-va-drivers
+      - mesa-vdpau-drivers
+      - mesa-vulkan-drivers
+      - va-driver-all
+      - vainfo
+      - hwinfo
+      - clinfo
+      - pciutils
+      - lshw
+    state: present
+    update_cache: yes
+    force_apt_get: yes
