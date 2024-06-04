@@ -461,7 +461,7 @@
     "ansible_common_vars": "",
     "ansible_extra_vars": "guestinfo_datasource_slug={{user `guestinfo_datasource_slug`}} guestinfo_datasource_ref={{user `guestinfo_datasource_ref`}} guestinfo_datasource_script={{user `guestinfo_datasource_script`}}",
     "ansible_scp_extra_args": "",
-    "ansible_user_vars": "node_custom_roles_post='ecs'",
+    "ansible_user_vars": "node_custom_roles_post='ecs intelgpu'",
     "base_build_version": "base-{{user `build_name`}}",
     "base_output_dir": "./output/{{user `base_build_version`}}",
     "build_timestamp": "{{timestamp}}",

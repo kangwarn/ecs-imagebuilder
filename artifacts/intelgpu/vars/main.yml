@@ -1,0 +1,6 @@
+---
+# vars file for openvino
+
+intel_deb_gpg_key: "https://repositories.intel.com/gpu/intel-graphics.key"
+intel_gpg_key_file: "/usr/share/keyrings/intel-graphics.gpg"
+intel_deb_repo: "https://repositories.intel.com/gpu/ubuntu"
